@@ -1,13 +1,5 @@
 [
     {
-        "model": "Maguida",
-        "api_key": "4535137c97f24af9b7044efe51b598b6",
-        "api_type": "azure",
-        "base_url": "https://kayra.openai.azure.com/",
-        "api_version": "2023-07-01-preview"
-    },
-    
-    {
         "model": "gpt-4-vision-preview",
         "api_key": "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"
     }
