@@ -39,7 +39,7 @@ mycol = mydb["chats"]
 config_list = autogen.config_list_from_json(
     "OAI_CONFIG_LIST",
     filter_dict={
-        "model": ["gpt-4-vision-preview"],
+        "model": ["Maguida"],
     },
 )
 
@@ -123,9 +123,12 @@ def echo_all(message):
     print(messages)
     response = chatbot.generate_reply(messages=messages,sender=user_proxy)
     while str(type(response))!="<class 'str'>":
+
+        print(response)
         del response["function_call"]
         messages.append(response)
         response = user_proxy.generate_reply(messages=messages,sender=chatbot)
+        print(response)
         messages.append(response)
         response = chatbot.generate_reply(messages=messages,sender=user_proxy)
     print(response)
